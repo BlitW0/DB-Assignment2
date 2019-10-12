@@ -7,11 +7,10 @@ TREE_ORDER = 3
 class Node():
     '''
     Base node object.
-    
+
     Each node stores keys and pointers. Pointers point to its child nodes.
 
-    Attributes:
-        order (int): The maximum number of keys the node can hold.
+    order (int): The maximum number of keys the node can hold.
     '''
     def __init__(self, order):
         self.is_leaf = True
@@ -55,8 +54,7 @@ class B_Plus_Tree():
     occurs, a key will 'float' upwards and be inserted into the parent node to
     act as a pivot.
     
-    Attributes:
-        order (int): The maximum number of keys each node can hold.
+    order (int): The maximum number of keys each node can hold.
     '''
     def __init__(self, order):
         self._root = Node(order)
@@ -126,7 +124,7 @@ class B_Plus_Tree():
 if __name__ == '__main__':
 
     if len(sys.argv) != 2:
-        print('Usage: part1.py <filepath>')
+        print('Usage: python3 part1.py <filepath>')
         exit(1)
 
     filepath = sys.argv[1]
